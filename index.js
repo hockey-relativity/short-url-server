@@ -35,6 +35,9 @@ if(LOGGING) {
   logFile = fs.createWriteStream(LOG_FILE, { flags: 'a' });
 }
 
+app.get('/', function(req, res) {
+  res.redirect('http://future.hockeyrelativity.com');
+})
 
 app.get(`${SHORT_URL_SUBDIR}/:id`, function(req, res) {
   db.get(URL_FETCH_STMT, req.params.id, function(err, rows) {
@@ -47,6 +50,7 @@ app.get(`${SHORT_URL_SUBDIR}/:id`, function(req, res) {
 
 app.post(ADMIN_PAGE, function(req, res) {
   let target = req.body.target;
+
   if(urlCheckRegex.test(target)) {
     db.run(URL_INSERT_STMT, target, Date.now(), function(err) {
       res.json({
