@@ -1,0 +1,18 @@
+{
+  "db": {
+    "file": "short-url-server.db",
+    "table": "urls"
+  },
+
+  "admin": {
+    "page": "/qxcf"
+  },
+
+  "server": {
+    "port": 8889
+  },
+
+  "shorturls": {
+    "subdir": "/u"
+  }
+}
