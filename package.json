@@ -1,0 +1,27 @@
+{
+  "name": "short-url-server",
+  "version": "1.0.0",
+  "description": "A tiny short url generator server with an API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leluso/short-url-server.git"
+  },
+  "author": "Justin Barber <brbr@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leluso/short-url-server/issues"
+  },
+  "homepage": "https://github.com/leluso/short-url-server#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "sqlite3": "^3.1.4",
+    "url-check-regex": "git+https://github.com/leluso/url-check-regex.git"
+  }
+}
