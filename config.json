@@ -14,5 +14,10 @@
 
   "shorturls": {
     "subdir": "/u"
+  },
+
+  "logging": {
+    "active": true,
+    "file": "short-url-server.log"
   }
 }
