@@ -48,7 +48,7 @@ app.post(ADMIN_PAGE, function(req, res) {
   let target = req.body.target;
   if(urlCheckRegex.test(target)) {
     db.run(URL_INSERT_STMT, target, Date.now(), function(err) {
-      res.status(400).json({
+      res.json({
         id: this.lastID,
         url: `${SHORT_URL_SUBDIR}/${this.lastID}`,
       });
@@ -60,7 +60,7 @@ app.post(ADMIN_PAGE, function(req, res) {
   }
 
   else {
-    res.json({
+    res.status(400).json({
       error: 'Invalid url',
     });
   }
